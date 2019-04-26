@@ -19,4 +19,5 @@ public class HomePage {
 	/**热门事项图标*/
 	public static final By HP_ICON_BANSHIGUIDE = By.id("com.hfi.hangzhoubanshi:id/tv_home_head_name");
 	
+	//test
 }
