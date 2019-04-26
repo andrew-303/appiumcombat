@@ -29,19 +29,14 @@ public class HomePageHelper {
 	public static void waitHomeUI(AppiumUtil appiumUtil,int elementTimeOut){
 		logger.info("正在等待APP首页元素加载");
 		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_BUTTON_SEARCH);
-		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_BUTTON_ACADEMIC);
-		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_BUTTON_DICT);
-		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_BUTTON_IMAGE);
-		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_BUTTON_MORE);
-		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_BUTTON_VDEDIO);
-		appiumUtil.waitForElementToLoad(elementTimeOut, HomePage.HP_LINK_STORY);
 		logger.info("APP首页元素加载完成");
 	}
 	
 	/**验证首页部分文本内容*/
 	public static void checkHomeUIText(AppiumUtil appiumUtil,String expected){
 		logger.info("正在验证APP首页文本内容是否正确");
-		appiumUtil.isTextCorrect(appiumUtil.getText(HomePage.HP_LINK_STORY), expected);
+		//appiumUtil.isTextCorrect(appiumUtil.getText(HomePage.HP_BUTTON_SEARCH), expected);
+		appiumUtil.isTextCorrect(appiumUtil.getText(appiumUtil.findElements(HomePage.HP_ICON_BANSHIGUIDE).get(3)), expected);
 		logger.info("验证APP首页文本内容完成");
 	}
 }

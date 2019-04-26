@@ -18,7 +18,7 @@ public class MorePage_001_UiCheckForMorePage_Test extends BasePrepare{
 		//去除欢迎界面和定位弹窗
 		InitPageHelper.handleInit(appiumUtil, InitPage.byElement);
 		//在首页上点击更多按钮
-		HomePageHelper.clickOnHomePage(appiumUtil, HomePage.HP_BUTTON_MORE);
+		//HomePageHelper.clickOnHomePage(appiumUtil, HomePage.HP_BUTTON_MORE);
 		//检查更多页面的文本
 		MorePageHelper.checkMorePageUIText(appiumUtil, data.get("LOGIN"),data.get("HISTORY"),data.get("SETTINGS"),data.get("FEEDBACK"));
 	}

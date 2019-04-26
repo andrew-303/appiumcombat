@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
  * @description 搜索页面元素
  * */
 
-public class SearchNativePage {
+public class SearchHomePage {
 	/**搜索输入框*/
 	 public static final By SNP_INPUT_SEARCH = By.id("com.microsoft.bing:id/search_text_field"); 
 	 /**搜索网页*/

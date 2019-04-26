@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import com.biyl.appiumcombat.util.AppiumUtil;
 
-public class SearchNativePageHelper {
+public class SearchHomePageHelper {
 	
 	public static Logger logger = Logger.getLogger(InitPageHelper.class);
 	

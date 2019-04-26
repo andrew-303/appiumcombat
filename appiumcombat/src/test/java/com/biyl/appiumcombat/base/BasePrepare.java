@@ -51,7 +51,8 @@ public class BasePrepare {
 	@AfterClass
 	public void clenTest(){
 		if(driver!=null){
-			appiumUtil.closeApp(PropertiesDataProvider.getTestData(appFilePath, appPackage));	//appium模式
+			//appiumUtil.closeApp(PropertiesDataProvider.getTestData(appFilePath, appPackage));	//appium模式
+			System.out.println("TestCase操作结束");
 		}else{
 			Assert.fail("driver没有获得对象,退出操作失败");
 		}
@@ -64,23 +65,28 @@ public class BasePrepare {
 	public Iterator<Object []> dataFortestMethod(){
 		String moduleName = null;	//模块的名字
 		String caseNum = null;	//用例编号
-		String className = this.getClass().getName();		
-		int dotIndexNum = className.indexOf(".");// 取得第一个.的index
-		int underlineIndexNum = className.indexOf("_");// 取得第一个_的index
+		String className = this.getClass().getName();//className=com.biyl.appiumcombat.testcases.more.MorePage_001_UiCheckForMorePage_Test
+		//System.out.println("className:"+className);
+		int dotIndexNum = className.indexOf(".");// 取得第一个.的index  =3
+		int underlineIndexNum = className.indexOf("_");// 取得第一个_的index =45
 		
 		if(dotIndexNum > 0){
+			System.out.println("dotIndexNum:"+dotIndexNum);
 			/**这里的calssName原始值大概是这样的：com.biyl.appiumcombat.testcases.login.LoginPage_001_loginError_Test
 			 * 那么下面这段代码className.substring(32, className.lastIndexOf("."))是什么意思？substring方法参数有两个
 			 * 一个开始位置，一个结束位置，32表示这个字符串的第32个位置，这个位置当前字符是l,className.lastIndexOf(".")表示返回这字符串最后一个.所在
 			 * 的位置，它是37，那么className.substring(33, className.lastIndexOf("."))可以转换成：className.substring(32, 37)，最终取得的值是login，
 			 * 也就是moduleName的值 
 			 * */
-			moduleName = className.substring(32,className.lastIndexOf("."));	// 取到模块的名称
+			moduleName = className.substring(32,className.lastIndexOf("."));	// 取到模块的名称=more
+			//System.out.println("moduleName:"+moduleName);
 		}
 		
 		if(underlineIndexNum>0){
+			System.out.println("underlineIndexNum:"+underlineIndexNum);
 			//这个分析方法和moduleName的分析方法一样
 			caseNum = className.substring(underlineIndexNum + 1, underlineIndexNum +4);	//取用例编号
+			System.out.println("caseNum:"+caseNum);
 		}
 		//将模块名称和用例的编号传给 ExcelDataProvider ，然后进行读取excel数据
 		return new ExcelDataProvider(moduleName, caseNum);

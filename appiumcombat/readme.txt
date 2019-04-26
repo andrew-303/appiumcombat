@@ -17,6 +17,9 @@ testcases
 顾名思义就是存放测试用例的地方，在这个包下，还会有很多子包，子包的个数根据你测试的系统的模块来划分，比如你有登录模块，首页模块等，那么我们起子包的名字就应该写成login、home。
 utils
 封装了各种工具类，包括读取excel，appium api封装类，读取数据库类，读取属性文件类和生成driver的类等。
+test
+test包下是单元测试中用到的测试类,非实际业务代码
+
 代码目录以及介绍完毕，下面介绍下剩下的文件夹都是干什么的。
 bin目录：项目编译生成class文件存放目录，这个目录不用去管，Eclipse会自动控制。
 config目录：存储框架类所需的所有属性文件，比如arrow的配置文件以及自定义的一些属性文件。
@@ -64,7 +67,13 @@ Excel监听报告解析
 主测试用例：
 15.SearchPage_001_SearchDemo_Test  需要继承BasePrepare。主测试用例里面，都是由各个页面帮助类来调用对应的页面操作方法，每个页面帮助类只写和本页面有关的方法，不要夹杂其他页面的方法，页面帮助类的方法，是调用AppiumUtil封装好的api
 
+断言失败不中断继续执行:
+Assertion:重写断言类，将testng断言放在try语句中，然后catch（Error）{}
+AssertListener:监听器
+
+
 完善测试参数和配置
+1、为了避免TestNg在执行完一个package后，直接跳出不进行下面的测试用例，需要将Appium在Genarel Setting那里设置覆盖Session，即勾选上Override Existing Session选项
 
 
 

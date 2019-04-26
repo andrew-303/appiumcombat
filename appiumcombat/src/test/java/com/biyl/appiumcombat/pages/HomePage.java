@@ -11,18 +11,12 @@ import org.openqa.selenium.By;
  * 第三部分：SEARCH，表示这元素的简称，三者之间用下划线“_”代替
  */
 public class HomePage {
+		
+	/**取消版本更新按钮*/
+	public static final By HP_BUTTON_UPDATEDEL = By.id("com.hfi.hangzhoubanshi:id/update_delete");
 	/**搜索按钮*/
-	public static final By HP_BUTTON_SEARCH = By.id("com.microsoft.bing:id/search");
-	/**更多内容按钮*/
-	public static final By HP_BUTTON_MORE = By.id("com.microsoft.bing:id/search_homepage_hamburger");
-	/**图片按钮*/
-	public static final By HP_BUTTON_IMAGE = By.id("com.microsoft.bing:id/hp_scope_images");
-	/**视频按钮*/
-	public static final By HP_BUTTON_VDEDIO = By.id("com.microsoft.bing:id/hp_scope_videos");
-	/**学术按钮*/
-	public static final By HP_BUTTON_ACADEMIC = By.id("com.microsoft.bing:id/hp_scope_academic");
-	/**词典按钮*/
-	public static final By HP_BUTTON_DICT = By.id("com.microsoft.bing:id/hp_scope_dict");
-	/**图片故事链接*/
-	public static final By HP_LINK_STORY = By.id("com.microsoft.bing:id/opal_home_picture_story_text1");
+	public static final By HP_BUTTON_SEARCH = By.id("com.hfi.hangzhoubanshi:id/ll_search");
+	/**热门事项图标*/
+	public static final By HP_ICON_BANSHIGUIDE = By.id("com.hfi.hangzhoubanshi:id/tv_home_head_name");
+	
 }

@@ -215,12 +215,21 @@ public class AppiumUtil {
 	
 	/**
 	 * 获取文本方式一
+	 * 传入By对象获取文本
 	 */
 	public String getText(By by){
 		return findElement(by).getText().trim();
 	}
+	
 	/**
 	 * 获取文本方式二
+	 * 传入WebElement元素获取对象
+	 */
+	public String getText(WebElement byelment){
+		return byelment.getText().trim();
+	}
+	/**
+	 * 获取文本方式三
 	 */
 	public String getText(String locateWay,String locateValue){
 		String str = "";

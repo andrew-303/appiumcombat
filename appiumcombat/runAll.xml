@@ -50,18 +50,22 @@
 		</packages>
 	</test>
 
+	
 
 
 	<listeners>
+		
 		<!-- excel报告 -->
 		<listener
 			class-name="com.biyl.appiumcombat.plugins.excelReporter.TestResultListener" />
 		<listener class-name="com.biyl.appiumcombat.plugins.excelReporter.ExcelReporter" />
-
+ 		
 		<!-- html报告 <listener class-name="com.young.appiumcombat.plugins.htmlReporter.TestResultListener" 
 			/> <listener class-name="com.young.appiumcombat.plugins.htmlReporter.RetryListener" 
 			/> <listener class-name="com.young.appiumcombat.plugins.htmlReporter.PowerEmailableReporter" 
-			/> -->
+			/> -->			
+		<!-- 监听重写断言，没有完全实现预期效果，暂时不启用 -->
+		<!-- <listener class-name="com.biyl.appiumcombat.plugins.assertPlugins.AssertListener"></listener> -->
 	</listeners>
 
 </suite> 
