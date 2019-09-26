@@ -61,7 +61,8 @@ public class BasePrepare {
 	
 	/**
 	 * 测试数据提供者-方法
-	 * 需要用到的地方，可以直接加@Test(dataProvider="testData")注解使用该测试数据
+	 * 需要用到的地方，可以直接加@Test(dataProvider="testData")注解使用该测试数据,
+	 * @Test(dataProvider="testData")注解的类的参数必须和@DataProvider注解的类的返回结果要一致
 	 */
 	@DataProvider(name = "testData")
 	public Iterator<Object []> dataFortestMethod(){
