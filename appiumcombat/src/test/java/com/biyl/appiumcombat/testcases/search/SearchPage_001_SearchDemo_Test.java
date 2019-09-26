@@ -29,13 +29,10 @@ public class SearchPage_001_SearchDemo_Test extends BasePrepare{
 		HomePageHelper.clickOnHomePage(appiumUtil, HomePage.HP_BUTTON_SEARCH);
 		//在搜索界面输入框输入qqq
 		SearchHomePageHelper.typeInfo(appiumUtil, SearchHomePage.SNP_INPUT_SEARCH,data.get("KEYWORD"));
-		//点击搜索网页，进行搜索
-		//SearchNativePageHelper.clickOnSearchNativePage(appiumUtil, SearchNativePage.SNP_LINK_WEBSEARCH);
-		//进入webview内容
-		//SearchWebviewPageHelper.enterWebview(appiumUtil, SearchWebviewPage.WEBVIEW_NAME);
-		//等待webview内容显示出来
-		//SearchWebviewPageHelper.waitForSearchResultDisplay(appiumUtil, elementTimeOut);
-		//验证搜索的结果是否包含Java
-		//SearchWebviewPageHelper.checkResultFitKeyword(appiumUtil, data.get("KEYWORD"), SearchWebviewPage.SWP_LINK_RESULT);
+		//验证搜索的结果是否包含qqq
+		SearchHomePageHelper.checkSearchUIText(appiumUtil, data.get("RESULT"));
+		//点击取消按钮
+		SearchHomePageHelper.clickOnSearchNativePage(appiumUtil, SearchHomePage.SNP_BUTTON_CANCELSEARCH);
+		
 	}
 }

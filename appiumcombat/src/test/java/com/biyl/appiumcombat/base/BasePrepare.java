@@ -9,6 +9,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import com.biyl.appiumcombat.util.AppiumUtil;
 import com.biyl.appiumcombat.util.ExcelDataProvider;
@@ -60,6 +61,7 @@ public class BasePrepare {
 	
 	/**
 	 * 测试数据提供者-方法
+	 * 需要用到的地方，可以直接加@Test(dataProvider="testData")注解使用该测试数据
 	 */
 	@DataProvider(name = "testData")
 	public Iterator<Object []> dataFortestMethod(){

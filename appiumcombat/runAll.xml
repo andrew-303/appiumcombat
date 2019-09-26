@@ -7,17 +7,17 @@
 	<!-- 测试平台 iOS和Android -->
 	<parameter name="platformName" value="Android" />
 	<!-- 平台版本 -->
-	<parameter name="platformVersion" value="4.4.2" />
+	<parameter name="platformVersion" value="6.0" />
 	<!-- 设备名字，可随意起名字，但是要有意义 -->
 	<parameter name="deviceName" value="appium-test-avd" />
 	<!-- android app路径 -->
-	<parameter name="androidAppPath" value="res/app/android/bing.apk" />
+	<parameter name="androidAppPath" value="res/app/android/杭州办事服务-政务外网-测试-hzydbsdebug-1.2.5.apk" />
 	<!-- ios app路径 -->
 	<parameter name="iosAppPath" value="res/app/ios/xxx.app" />
 	<!--app的包 -->
-	<parameter name="appPackage" value="com.microsoft.bing" />
+	<parameter name="appPackage" value="com.hfi.hangzhoubanshi" />
 	<!--app的 activity -->
-	<parameter name="appActivity" value="com.microsoft.clients.bing.app.MainActivity" />
+	<parameter name="appActivity" value="com.hfi.hangzhoubanshi.ui.activities.WelcomActivity" />
 	<!--是否支持unicode输入设置为true可以输入中文字符 -->
 	<parameter name="unicodeKeyboard" value="true" />
 	<!-- 重置键盘输入法 -->
@@ -34,22 +34,19 @@
 	<parameter name="appFilePath" value="res/properties/app.properties" />
 
 
-	<test name="搜索" preserve-order="true">
-		<packages>
-			<package name="com.biyl.appiumcombat.testcases.search" />
-		</packages>
-	</test>
-	<test name="更多" preserve-order="true">
-		<packages>
-			<package name="com.biyl.appiumcombat.testcases.more" />
-		</packages>
-	</test>
+	
+
 	<test name="首页" preserve-order="true">
 		<packages>
 			<package name="com.biyl.appiumcombat.testcases.home" />
 		</packages>
 	</test>
 
+	<test name="搜索" preserve-order="true">
+			<packages>
+				<package name="com.biyl.appiumcombat.testcases.search" />
+			</packages>
+		</test>
 	
 
 

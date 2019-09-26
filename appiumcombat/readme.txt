@@ -75,7 +75,6 @@ AssertListener:监听器
 完善测试参数和配置
 1、为了避免TestNg在执行完一个package后，直接跳出不进行下面的测试用例，需要将Appium在Genarel Setting那里设置覆盖Session，即勾选上Override Existing Session选项
 
-
-
+提交到github
 
 
